@@ -116,6 +116,17 @@ endef
 $(eval $(call KernelPackage,ata-nvidia-sata))
 
 
+define KernelPackage/ata-pata-821x
+  TITLE:=IT8211/2 PATA support
+  KCONFIG:=CONFIG_PATA_IT821X
+  FILES:=$(LINUX_DIR)/drivers/ata/pata_it821x.ko
+  AUTOLOAD:=$(call AutoLoad,41,pata_it821x,1)
+  $(call AddDepends/ata)
+endef
+
+$(eval $(call KernelPackage,ata-pata-821x))
+
+
 define KernelPackage/ata-pdc202xx-old
   SUBMENU:=$(BLOCK_MENU)
   TITLE:=Older Promise PATA controller support
