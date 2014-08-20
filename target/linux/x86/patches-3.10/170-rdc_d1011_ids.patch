@@ -1,0 +1,20 @@
+--- a/drivers/ata/pata_it821x.c
++++ b/drivers/ata/pata_it821x.c
+@@ -957,6 +957,7 @@ static const struct pci_device_id it821x
+ 	{ PCI_VDEVICE(ITE, PCI_DEVICE_ID_ITE_8211), },
+ 	{ PCI_VDEVICE(ITE, PCI_DEVICE_ID_ITE_8212), },
+ 	{ PCI_VDEVICE(RDC, PCI_DEVICE_ID_RDC_D1010), },
++	{ PCI_VDEVICE(RDC, PCI_DEVICE_ID_RDC_D1011), },
+ 
+ 	{ },
+ };
+--- a/include/linux/pci_ids.h
++++ b/include/linux/pci_ids.h
+@@ -2328,6 +2328,7 @@
+ #define PCI_DEVICE_ID_RDC_R6060		0x6060
+ #define PCI_DEVICE_ID_RDC_R6061		0x6061
+ #define PCI_DEVICE_ID_RDC_D1010		0x1010
++#define PCI_DEVICE_ID_RDC_D1011		0x1011
+ 
+ #define PCI_VENDOR_ID_LENOVO		0x17aa
+ 
